@@ -1,87 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>PHOB — Premium Social Gaming Café</title>
+  <title>Papan Hobbies — Community Lifestyle Space</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      background: #111111;
-      color: white;
-      font-family: Arial, sans-serif;
-      overflow-x: hidden;
+
+    *{
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
     }
 
-    .glow {
-      box-shadow: 0 0 40px rgba(212,165,116,0.3);
+    body{
+      background:#F8F5EF;
+      color:#2F3E46;
+      overflow-x:hidden;
     }
 
-    .gradient-text {
-      background: linear-gradient(to right, #D4A574, #ffffff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .gradient-text{
+      background: linear-gradient(90deg,#F4A261,#E07A5F);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
     }
+
+    .glass{
+      background: rgba(255,255,255,0.65);
+      backdrop-filter: blur(16px);
+      border:1px solid rgba(255,255,255,0.5);
+    }
+
+    .floating{
+      animation:floating 5s ease-in-out infinite;
+    }
+
+    @keyframes floating{
+      0%{transform:translateY(0px);}
+      50%{transform:translateY(-12px);}
+      100%{transform:translateY(0px);}
+    }
+
   </style>
 </head>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><section class="py-32 px-6 max-w-7xl mx-auto">
+<body>
 
-  <div class="text-center mb-20">
+<!-- BACKGROUND -->
 
-    <h2 class="text-5xl font-bold mb-6 gradient-text">
-      Market Opportunity
-    </h2>
+<div class="fixed inset-0 -z-10 overflow-hidden">
 
-    <p class="text-zinc-400 text-xl max-w-3xl mx-auto">
-      Pekanbaru’s café culture and community lifestyle trend continue to grow,
-      creating strong opportunities for premium social gaming experiences.
-    </p>
+  <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-orange-200 rounded-full blur-3xl opacity-30"></div>
 
-  </div>
+  <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-green-200 rounded-full blur-3xl opacity-30"></div>
 
-  <div class="grid lg:grid-cols-2 gap-10">
+</div>
 
-    <div class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8">
+<!-- HERO -->
 
-      <h3 class="text-2xl font-bold text-[#D4A574] mb-6">
-        Café Lifestyle Growth
-      </h3>
+<section class="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
 
-      <canvas id="growthChart"></canvas>
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+    <!-- LEFT -->
+
+    <div>
+
+      <div class="inline-block px-4 py-2 rounded-full bg-orange-100 text-orange-600 font-semibold mb-6">
+        Community Lifestyle Space
+      </div>
+
+      <h1 class="text-6xl lg:text-8xl font-extrabold leading-tight mb-6">
+        <span class="gradient-text">
+          Papan
+        </span>
+        <br>
+        Hobbies
+      </h1>
+
+      <p class="text-xl text-slate-600 leading-relaxed mb-10 max-w-xl">
+        Tempat nongkrong modern yang menggabungkan café, mahjong,
+        board game, komunitas, dan event experience dalam satu ruang sosial yang fresh dan interaktif.
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+
+        <a href="#market"
+          class="px-8 py-4 rounded-2xl bg-[#F4A261] text-white font-semibold hover:scale-105 transition duration-300 shadow-xl shadow-orange-200">
+          Lihat Peluang Bisnis
+        </a>
+
+        <a href="#investasi"
+          class="px-8 py-4 rounded-2xl glass font-semibold hover:scale-105 transition duration-300">
+          Skema Investasi
+        </a>
+
+      </div>
 
     </div>
 
-    <div class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8">
+    <!-- RIGHT -->
 
-      <h3 class="text-2xl font-bold text-[#D4A574] mb-6">
-        Investor Snapshot
-      </h3>
+    <div class="relative">
 
-      <div class="space-y-6">
+      <div class="glass rounded-[40px] p-10 shadow-2xl floating">
 
-        <div class="bg-black/30 rounded-2xl p-6">
-          <p class="text-zinc-400 mb-2">Estimated Startup Capital</p>
-          <h4 class="text-4xl font-bold text-[#D4A574]">
-            Rp500M+
-          </h4>
-        </div>
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/3652/3652191.png"
+          class="w-32 mb-6"
+        >
 
-        <div class="bg-black/30 rounded-2xl p-6">
-          <p class="text-zinc-400 mb-2">Revenue Potential</p>
-          <h4 class="text-4xl font-bold text-[#D4A574]">
-            Rp80–150M
-          </h4>
-        </div>
+        <h3 class="text-3xl font-bold mb-4">
+          Modern Community Café
+        </h3>
 
-        <div class="bg-black/30 rounded-2xl p-6">
-          <p class="text-zinc-400 mb-2">Scalable Community Model</p>
-          <h4 class="text-2xl font-bold text-[#D4A574]">
-            High Retention
-          </h4>
+        <p class="text-slate-600 leading-relaxed mb-8">
+          Dibangun untuk generasi muda Pekanbaru yang mencari tempat nongkrong dengan pengalaman sosial yang lebih hidup dan berbeda.
+        </p>
+
+        <div class="grid grid-cols-2 gap-4">
+
+          <div class="bg-orange-50 rounded-2xl p-5">
+            <h4 class="font-bold text-3xl text-[#E07A5F] mb-2">
+              55%
+            </h4>
+            <p class="text-sm text-slate-500">
+              Profit Investor
+            </p>
+          </div>
+
+          <div class="bg-green-50 rounded-2xl p-5">
+            <h4 class="font-bold text-3xl text-[#81B29A] mb-2">
+              40%
+            </h4>
+            <p class="text-sm text-slate-500">
+              Profit Papan Hobbies
+            </p>
+          </div>
+
         </div>
 
       </div>
@@ -90,133 +153,374 @@
 
   </div>
 
-</section><script>
+</section>
+
+<!-- MARKET -->
+
+<section id="market" class="py-32 px-6">
+
+  <div class="max-w-7xl mx-auto">
+
+    <div class="text-center mb-20">
+
+      <h2 class="text-5xl font-extrabold mb-6">
+        Peluang Market Pekanbaru
+      </h2>
+
+      <p class="text-xl text-slate-500 max-w-3xl mx-auto">
+        Budaya nongkrong, komunitas, dan lifestyle café terus berkembang.
+        Papan Hobbies hadir membawa konsep social experience yang masih sangat minim di Pekanbaru.
+      </p>
+
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-10">
+
+      <!-- CHART -->
+
+      <div class="glass rounded-[32px] p-8 shadow-xl">
+
+        <h3 class="text-2xl font-bold mb-8">
+          Trend Lifestyle Café
+        </h3>
+
+        <canvas id="growthChart"></canvas>
+
+      </div>
+
+      <!-- DASHBOARD -->
+
+      <div class="space-y-6">
+
+        <div class="glass rounded-[32px] p-8 shadow-xl">
+
+          <p class="text-slate-500 mb-2">
+            Estimasi Modal Awal
+          </p>
+
+          <h3 class="text-5xl font-extrabold gradient-text">
+            Rp500JT
+          </h3>
+
+        </div>
+
+        <div class="glass rounded-[32px] p-8 shadow-xl">
+
+          <p class="text-slate-500 mb-2">
+            Potensi Revenue Bulanan
+          </p>
+
+          <h3 class="text-5xl font-extrabold gradient-text">
+            Rp80–150JT
+          </h3>
+
+        </div>
+
+        <div class="glass rounded-[32px] p-8 shadow-xl">
+
+          <p class="text-slate-500 mb-2">
+            Model Bisnis
+          </p>
+
+          <h3 class="text-3xl font-bold text-[#81B29A]">
+            Community Driven
+          </h3>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- BUSINESS MODEL -->
+
+<section class="py-32 px-6">
+
+  <div class="max-w-7xl mx-auto">
+
+    <div class="text-center mb-20">
+
+      <h2 class="text-5xl font-extrabold mb-6">
+        Model Bisnis
+      </h2>
+
+      <p class="text-xl text-slate-500">
+        Tidak hanya bergantung pada makanan & minuman.
+      </p>
+
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="glass rounded-[32px] p-8 shadow-xl">
+
+        <div class="text-5xl mb-6">
+          🎲
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4">
+          Board Game & Mahjong
+        </h3>
+
+        <p class="text-slate-500 leading-relaxed">
+          Aktivitas sosial yang meningkatkan customer retention dan repeat visit.
+        </p>
+
+      </div>
+
+      <div class="glass rounded-[32px] p-8 shadow-xl">
+
+        <div class="text-5xl mb-6">
+          ☕
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4">
+          Café & Lifestyle
+        </h3>
+
+        <p class="text-slate-500 leading-relaxed">
+          Tempat nongkrong modern dengan ambience fresh dan nyaman.
+        </p>
+
+      </div>
+
+      <div class="glass rounded-[32px] p-8 shadow-xl">
+
+        <div class="text-5xl mb-6">
+          🎉
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4">
+          Event & Community
+        </h3>
+
+        <p class="text-slate-500 leading-relaxed">
+          Tournament, gathering, sponsor event, dan komunitas loyal.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- INVESTASI -->
+
+<section id="investasi" class="py-32 px-6">
+
+  <div class="max-w-7xl mx-auto">
+
+    <div class="text-center mb-20">
+
+      <h2 class="text-5xl font-extrabold mb-6">
+        Skema Investasi
+      </h2>
+
+      <p class="text-xl text-slate-500">
+        Partnership yang dirancang sustainable dan scalable.
+      </p>
+
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-10">
+
+      <div class="glass rounded-[40px] p-10 shadow-xl">
+
+        <h3 class="text-3xl font-bold mb-10">
+          Struktur Modal
+        </h3>
+
+        <div class="space-y-6">
+
+          <div class="flex justify-between items-center bg-orange-50 rounded-2xl p-6">
+
+            <span class="font-semibold">
+              Investor
+            </span>
+
+            <span class="text-3xl font-bold text-[#F4A261]">
+              70%
+            </span>
+
+          </div>
+
+          <div class="flex justify-between items-center bg-green-50 rounded-2xl p-6">
+
+            <span class="font-semibold">
+              Papan Hobbies
+            </span>
+
+            <span class="text-3xl font-bold text-[#81B29A]">
+              30%
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="glass rounded-[40px] p-10 shadow-xl">
+
+        <h3 class="text-3xl font-bold mb-10">
+          Profit Sharing
+        </h3>
+
+        <div class="space-y-6">
+
+          <div class="flex justify-between items-center bg-orange-50 rounded-2xl p-6">
+
+            <span class="font-semibold">
+              Investor
+            </span>
+
+            <span class="text-3xl font-bold text-[#F4A261]">
+              55%
+            </span>
+
+          </div>
+
+          <div class="flex justify-between items-center bg-green-50 rounded-2xl p-6">
+
+            <span class="font-semibold">
+              Papan Hobbies
+            </span>
+
+            <span class="text-3xl font-bold text-[#81B29A]">
+              40%
+            </span>
+
+          </div>
+
+          <div class="flex justify-between items-center bg-slate-100 rounded-2xl p-6">
+
+            <span class="font-semibold">
+              Development Fund
+            </span>
+
+            <span class="text-3xl font-bold text-slate-600">
+              5%
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CLOSING -->
+
+<section class="py-32 px-6">
+
+  <div class="max-w-5xl mx-auto text-center">
+
+    <div class="glass rounded-[40px] p-16 shadow-2xl">
+
+      <h2 class="text-6xl font-extrabold mb-8 leading-tight">
+        Mari Bangun
+        <span class="gradient-text">
+          Papan Hobbies
+        </span>
+        Bersama
+      </h2>
+
+      <p class="text-xl text-slate-500 leading-relaxed mb-12">
+        Sebuah ruang komunitas modern yang menggabungkan lifestyle,
+        social interaction, café culture, dan entertainment experience
+        dalam satu konsep yang scalable dan fresh untuk Pekanbaru.
+      </p>
+
+      <a href="#"
+        class="inline-block px-10 py-5 rounded-2xl bg-[#F4A261] text-white text-lg font-semibold hover:scale-105 transition duration-300 shadow-xl shadow-orange-200">
+        Become Our Partner
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+
+  gsap.from("h1",{
+    y:80,
+    opacity:0,
+    duration:1.2
+  });
+
+  gsap.from("p",{
+    y:40,
+    opacity:0,
+    duration:1,
+    stagger:0.1,
+    delay:0.3
+  });
+
+  gsap.from("a",{
+    scale:0.8,
+    opacity:0,
+    duration:1,
+    delay:0.5
+  });
+
   const ctx = document.getElementById('growthChart');
 
-  new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: ['2022', '2023', '2024', '2025', '2026'],
-      datasets: [{
-        label: 'Lifestyle Café Growth',
-        data: [20, 35, 50, 75, 95],
-        borderColor: '#D4A574',
-        backgroundColor: 'rgba(212,165,116,0.1)',
-        tension: 0.4,
-        fill: true
+  new Chart(ctx,{
+    type:'line',
+    data:{
+      labels:['2022','2023','2024','2025','2026'],
+      datasets:[{
+        label:'Pertumbuhan Lifestyle Café',
+        data:[20,35,50,75,95],
+        borderColor:'#F4A261',
+        backgroundColor:'rgba(244,162,97,0.15)',
+        tension:0.4,
+        fill:true
       }]
     },
-    options: {
-      plugins: {
-        legend: {
-          labels: {
-            color: '#ffffff'
+    options:{
+      plugins:{
+        legend:{
+          labels:{
+            color:'#2F3E46'
           }
         }
       },
-      scales: {
-        x: {
-          ticks: {
-            color: '#aaaaaa'
+      scales:{
+        x:{
+          ticks:{
+            color:'#666'
           },
-          grid: {
-            color: 'rgba(255,255,255,0.05)'
+          grid:{
+            color:'rgba(0,0,0,0.05)'
           }
         },
-        y: {
-          ticks: {
-            color: '#aaaaaa'
+        y:{
+          ticks:{
+            color:'#666'
           },
-          grid: {
-            color: 'rgba(255,255,255,0.05)'
+          grid:{
+            color:'rgba(0,0,0,0.05)'
           }
         }
       }
     }
   });
-</script><body>
 
-  <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+</script>
 
-    <div class="absolute inset-0 bg-gradient-to-b from-black via-zinc-900 to-black opacity-90"></div>
-
-    <div class="relative z-10 text-center px-6">
-
-      <h1 class="text-6xl md:text-8xl font-bold gradient-text mb-6">
-        PHOB
-      </h1>
-
-      <p class="text-xl md:text-2xl text-zinc-300 mb-8">
-        Premium Social Gaming Café & Community Space
-      </p>
-
-      <a href="#about"
-        class="inline-block px-8 py-4 rounded-full bg-[#D4A574] text-black font-semibold hover:scale-105 transition duration-300 glow">
-        Explore The Opportunity
-      </a>
-
-    </div>
-
-  </section>
-
-  <section id="about" class="py-32 px-6 max-w-6xl mx-auto">
-
-    <div class="grid md:grid-cols-2 gap-12">
-
-      <div class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8">
-        <h2 class="text-3xl font-bold mb-4 text-[#D4A574]">
-          Community Driven
-        </h2>
-
-        <p class="text-zinc-300 leading-relaxed">
-          PHOB combines café culture, social gaming, and community experience
-          into one premium hidden gem destination in Pekanbaru.
-        </p>
-      </div>
-
-      <div class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8">
-        <h2 class="text-3xl font-bold mb-4 text-[#D4A574]">
-          Scalable Concept
-        </h2>
-
-        <p class="text-zinc-300 leading-relaxed">
-          Built with long-term scalability through events, memberships,
-          sponsorships, and future franchise expansion.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-
-<script>
-  gsap.from("h1", {
-    y: 80,
-    opacity: 0,
-    duration: 1.2
-  });
-
-  gsap.from("p", {
-    y: 40,
-    opacity: 0,
-    duration: 1,
-    delay: 0.4
-  });
-
-  gsap.from("a", {
-    scale: 0.8,
-    opacity: 0,
-    duration: 0.8,
-    delay: 0.8
-  });
-</script><body class="relative overflow-x-hidden">
-  <div class="fixed inset-0 -z-10 overflow-hidden">
-
-  <div class="absolute top-0 left-1/4 w-96 h-96 bg-[#D4A574]/10 blur-3xl rounded-full"></div>
-
-  <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-orange-500/10 blur-3xl rounded-full"></div>
-
-</div>
+</body>
 </html>
