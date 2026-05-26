@@ -28,7 +28,113 @@
   </style>
 </head>
 
-<body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><section class="py-32 px-6 max-w-7xl mx-auto">
+
+  <div class="text-center mb-20">
+
+    <h2 class="text-5xl font-bold mb-6 gradient-text">
+      Market Opportunity
+    </h2>
+
+    <p class="text-zinc-400 text-xl max-w-3xl mx-auto">
+      Pekanbaru’s café culture and community lifestyle trend continue to grow,
+      creating strong opportunities for premium social gaming experiences.
+    </p>
+
+  </div>
+
+  <div class="grid lg:grid-cols-2 gap-10">
+
+    <div class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8">
+
+      <h3 class="text-2xl font-bold text-[#D4A574] mb-6">
+        Café Lifestyle Growth
+      </h3>
+
+      <canvas id="growthChart"></canvas>
+
+    </div>
+
+    <div class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8">
+
+      <h3 class="text-2xl font-bold text-[#D4A574] mb-6">
+        Investor Snapshot
+      </h3>
+
+      <div class="space-y-6">
+
+        <div class="bg-black/30 rounded-2xl p-6">
+          <p class="text-zinc-400 mb-2">Estimated Startup Capital</p>
+          <h4 class="text-4xl font-bold text-[#D4A574]">
+            Rp500M+
+          </h4>
+        </div>
+
+        <div class="bg-black/30 rounded-2xl p-6">
+          <p class="text-zinc-400 mb-2">Revenue Potential</p>
+          <h4 class="text-4xl font-bold text-[#D4A574]">
+            Rp80–150M
+          </h4>
+        </div>
+
+        <div class="bg-black/30 rounded-2xl p-6">
+          <p class="text-zinc-400 mb-2">Scalable Community Model</p>
+          <h4 class="text-2xl font-bold text-[#D4A574]">
+            High Retention
+          </h4>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section><script>
+  const ctx = document.getElementById('growthChart');
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['2022', '2023', '2024', '2025', '2026'],
+      datasets: [{
+        label: 'Lifestyle Café Growth',
+        data: [20, 35, 50, 75, 95],
+        borderColor: '#D4A574',
+        backgroundColor: 'rgba(212,165,116,0.1)',
+        tension: 0.4,
+        fill: true
+      }]
+    },
+    options: {
+      plugins: {
+        legend: {
+          labels: {
+            color: '#ffffff'
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: {
+            color: '#aaaaaa'
+          },
+          grid: {
+            color: 'rgba(255,255,255,0.05)'
+          }
+        },
+        y: {
+          ticks: {
+            color: '#aaaaaa'
+          },
+          grid: {
+            color: 'rgba(255,255,255,0.05)'
+          }
+        }
+      }
+    }
+  });
+</script><body>
 
   <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
 
